@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <!-- Grid definitions -->
+        <!-- Grid definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <!-- Tools -->
+        <Label Grid.Column="1" Grid.Row="1" Content="Add director"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="First Name:"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="Last Name:"/>
+        <TextBox x:Name="txtDirectorFirstName" Grid.Column="2" Grid.Row="2" Width="100"/>
+        <TextBox x:Name="txtDirectorLastName" Grid.Column="2" Grid.Row="3" Width="100"/>
+        <Button x:Name="btnDirector" Grid.Column="1" Grid.Row="4" Content="Add Director" Click="btnDirector_Click"/>
+        
+        
+        <Label FontWeight="Bold" Grid.Column="1" Grid.Row="5" Content="Add Actor"/>
+        <Label Grid.Column="1" Grid.Row="6" Content="First Name:"/>
+        <Label Grid.Column="1" Grid.Row="7" Content="Last Name:"/>
+        <TextBox x:Name="txtActorFirstName" Grid.Column="2" Grid.Row="6" Width="100"/>
+        <TextBox x:Name="txtActorLastName" Grid.Column="2" Grid.Row="7" Width="100"/>
+        <Button x:Name="btnAddActor" Grid.Column="1" Grid.Row="8" Content="Add Director" Click="btnAddActor_Click"/>
     </Grid>
 </Window>

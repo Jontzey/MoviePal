@@ -23,6 +23,6 @@ namespace MoviePal.Models
         // Movie har 1 director
         public director Director { get; set; } = null!;
 
-        public List<actor>? Actors { get; set; }
+        public List<actor> Actors { get; set; } = new();
     }
 }

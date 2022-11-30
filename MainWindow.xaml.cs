@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MoviePal.Data;
+using MoviePal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,36 @@ namespace MoviePal
         public MainWindow()
         {
             InitializeComponent();
+
+
+
+        }
+
+        private void btnDirector_Click(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext Context = new AppDbContext())
+            {
+                director Newdirector = new();
+
+                Newdirector.Firstname = txtDirectorFirstName.Text;
+                Newdirector.LastName = txtDirectorLastName.Text;
+
+                Context.Directors.Add(Newdirector);
+                Context.SaveChanges();
+            }
+        }
+
+        private void btnAddActor_Click(object sender, RoutedEventArgs e)
+        {
+            using (AppDbContext context = new())
+            {
+                context.Actors.Add(new actor()
+                {
+                    FirstName = txtActorFirstName.Text,
+                    LastName = txtActorLastName.Text,
+                });
+                context.SaveChanges();
+            }
         }
     }
 }
